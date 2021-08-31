@@ -17,10 +17,10 @@ function App() {
   }
   const handleReset = () => setCounters(initialState)
   const handleDecrement = (counterId) => {
-    counters.map((count) =>
+    const newArray = counters.map((count) =>
       count.id === counterId && count.value > 0 ? (count.value -= 1) : count
     )
-    setCounters([...counters])
+    setCounters(newArray)
   }
   const handleIncrement = (counterId) => {
     counters.map((count) =>
